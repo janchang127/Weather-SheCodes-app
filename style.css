@@ -4,12 +4,15 @@ body {
   color: rgb(231, 231, 231);
   margin: 34px;
 width: 818px;
-padding: 50px;}
+padding: 50px;
+
+}
 .app{
     background-color: red;
     border-radius: 20px;
     background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
     padding: 41px;
+    max-width:600px;
 }
 
 
@@ -21,6 +24,7 @@ h1 {
  
   padding: 9px;
   margin-top: -13px;
+  
 
 }
 h2{
@@ -47,11 +51,10 @@ li {
   font-size: 25px;
 }
 
+small {
+  color: black;
+}
+
 .info{color:white;
 font-size 60px;
 padding: 8px;}
-
-.sig{
-    color: black;
-    font-size: 50px;
-}
