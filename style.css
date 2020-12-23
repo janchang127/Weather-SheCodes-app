@@ -58,3 +58,25 @@ small {
 .info{color:white;
 font-size 60px;
 padding: 8px;}
+
+.overview{
+  margin-bottom: 20px;
+}
+
+.fas {
+  margin-right: 10px;
+  
+}
+
+.weather-temperature strong {
+  font-size: 64px;
+  font-weight:400;
+  line-height: 1;
+}
+
+.weather-temperature .units{
+position:relative;
+font-size: 16px;
+top:-32px;
+
+}
