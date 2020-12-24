@@ -23,7 +23,8 @@ let day = days[now.getDay()];
 p.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showTemperature(response) {
-  let showTemp = document.querySelector("#main-temp");
+  
+  let showTemp = document.querySelector("#temperature");
   let showName = document.querySelector("#city");
   let showWind = document.querySelector("#wind");
   let showHumidity = document.querySelector("#humidity");
@@ -55,7 +56,7 @@ let searchCityForm = document.querySelector("#search-form");
 searchCityForm.addEventListener("submit", citySearch);
 
 function displayLocationTemp(response) {
-  let displayTemp = document.querySelector("#main-temp");
+  let displayTemp = document.querySelector("#temperature");
   let displayName = document.querySelector("#city");
   let displayWind = document.querySelector("#wind");
   let displayHumidity = document.querySelector("#humidity");
@@ -74,5 +75,6 @@ function showLocation(position) {
   let apiUrl = `${apiEndpoint}lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
   axios.get(apiUrl).then(displayLocationTemp);
 }
+
 
 navigator.geolocation.getCurrentPosition(showLocation);
