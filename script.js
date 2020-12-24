@@ -28,10 +28,12 @@ function showTemperature(response) {
   let showName = document.querySelector("#city");
   let showWind = document.querySelector("#wind");
   let showHumidity = document.querySelector("#humidity");
+  let showIcon = document.querySelector("#icon");
   showTemp.innerHTML = Math.round(response.data.main.temp);
   showName.innerHTML = response.data.name;
   showWind.innerHTML = `${Math.round(response.data.wind.speed)}mph`;
   showHumidity.innerHTML = `${response.data.main.humidity}%`;
+  showIcon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   console.log(response.data);
 }
 
