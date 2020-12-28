@@ -21,14 +21,23 @@
             <div class="row">
                 <div class="col-4.5">
 
-                    <form id="search-form">
-                        <input type="text" placeholder="Search for a city" autocomplete="off" autofocus="on"
+                    <form id="search-form" class="mb-3">
+                        <div class="row">
+                            <div class="col-8">
+                       
+                        <input type="search" 
+                        placeholder="Search for a city" 
+                        autocomplete="off" 
+                        autofocus="on"
                             id="search-text-input" />
-               
+                            </div>
+               <div class="col-4">
                 <button type="button" class="btn btn-outline-light">Search</button>
                 </div>
+                </div>
             </div>
-            </div>
+            </div>           
+        </form>
             <div class="row">
                 <div id="city"> Potomac, MD </div>
             </div>
@@ -39,10 +48,9 @@
                     <div class="clearfix weather-temperature">
                   
                    <strong id=temperature>75</strong>
-                   <span class="units">℉ | <a href="#">℃</a></span>
+                   <span class="units">℃ | <a href="#" id="fahrenheit-link"> ℉ </a></span>
                    <div class="float-left">
                     <img src=""
-                  
                     id="icon"
                     class="float-left"/>
                 </div>
