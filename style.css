@@ -87,3 +87,12 @@ font-size: 16px;
 top:-32px;
 
 }
+
+.weather-temperature .active {
+color: black;
+cursor: default;
+}
+
+.weather-temperature .active:hover {
+text-decoration: none;
+}
