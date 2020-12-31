@@ -38,19 +38,18 @@ function showTemperature(response) {
   console.log(response.data);
 }
 
-function formatHours(timestamp) {
-  
-let date = now.getDate();
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+ffunction formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
 }
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-  
-}
-return `${hours}:${minutes}`;}
 
 
 function displayForecast(response) {
@@ -66,7 +65,7 @@ function displayForecast(response) {
                 <ul>
                     <li>${formatHours(forecast.dt * 1000)}</li> 
                     <li><strong>${Math.round(forecast.main.temp_max)}° </strong>${Math.round(forecast.main.temp_min)}°</li>
-                    <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png}" alt""
+                    <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt""
                     />
                 </ul>
                 </div>
