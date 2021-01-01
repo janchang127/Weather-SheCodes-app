@@ -38,7 +38,7 @@ function showTemperature(response) {
   console.log(response.data);
 }
 
-ffunction formatHours(timestamp) {
+function formatHours(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
